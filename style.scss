@@ -18,8 +18,9 @@ html {
 }
 
 body {
-	background: $white;
-  font: 18px/1.4 $helvetica;
+  background: $white;
+  //font: 18px/1.4 $helvetica;
+  font-family: 'Raleway', sans-serif;
   color: $darkGray;
 }
 
@@ -31,7 +32,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $helveticaNeue;
+  //font-family: $helveticaNeue;
+  font-family: 'Raleway', sans-serif;
   color: $darkerGray;
   font-weight: bold;
 
@@ -287,3 +289,4 @@ footer {
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
 @import "svg-icons";
+@import url(https://fonts.googleapis.com/css?family=Raleway:300);

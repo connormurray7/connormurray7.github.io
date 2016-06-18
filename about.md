@@ -4,12 +4,9 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
-
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
+* Graduated the University of Michigan in 2016 with a B.S in Computer Science
+* Raced a Solar car in the Word Solar Challenge in 2013 ([more info](http://www.solarcar.engin.umich.edu/2013/))
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[connormurray7@gmail.com](mailto:connormurray7@gmail.com)
