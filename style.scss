@@ -1,4 +1,4 @@
----
+
 ---
 
 //
@@ -20,22 +20,43 @@ html {
 body {
   background: $white;
   //font: 18px/1.4 $helvetica;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Sorts Mill Goudy', serif;
   color: $darkGray;
 }
 
+#content {
+    margin-left: 270px;
+}
+
+.outer-wrapper {
+    max-width: 940px;
+    margin-top: 10px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+}
+.inner-wrapper {
+    width: 100%;
+    float: left;
+    display: block;
+}
+
 .container {
-  margin: 0 auto;
-  max-width: 740px;
-  padding: 0 10px;
-  width: 100%;
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 0 10px;
+    width: 100%;
+
+    @include mobile {
+        margin-left: 0px !important;
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
   //font-family: $helveticaNeue;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Sorts Mill Goudy', serif;
   color: $darkerGray;
-  font-weight: bold;
+  font-weight: 100;
 
   line-height: 1.7;
   margin: 1em 0 15px;
@@ -47,7 +68,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 25px;
   a {
     color: inherit;
   }
@@ -68,6 +89,7 @@ h4 {
 
 p {
   margin: 15px 0;
+  line-height: 1.2;
 }
 
 a {
@@ -80,7 +102,7 @@ a {
 }
 
 ul, ol {
-  margin: 15px 0;
+  margin: 0px 0;
   padding-left: 30px;
 }
 
@@ -110,6 +132,10 @@ strong, b {
 
 img {
   max-width: 100%;
+}
+.hr-tag {
+    width: 50%;
+    margin-left: 0px;
 }
 
 // Fixes images in popup boxes from Google Translate
@@ -152,13 +178,24 @@ img {
 // .masthead
 //
 
-.wrapper-masthead {
+#nav-side-bar {
+    padding-top: 120px;
+}
+
+.wrapper-sidebar {
   margin-bottom: 50px;
+  float: left;
+  padding-left: 40px;
+  padding-top: 100px;
+  
+  @include mobile {
+    display: none;
+  }
 }
 
 .masthead {
-  padding: 20px 0;
-  border-bottom: 1px solid $lightGray;
+  //padding: 20px 0;
+  //border-bottom: 1px solid $lightGray;
 
   @include mobile {
     text-align: center;
@@ -245,7 +282,7 @@ nav {
 
 .posts > .post {
   padding-bottom: 2em;
-  border-bottom: 1px solid $lightGray;
+  //border-bottom: 1px solid $lightGray;
 }
 
 .posts > .post:last-child {
@@ -268,7 +305,8 @@ nav {
   }
 
   .read-more {
-    text-transform: uppercase;
+    //text-transform: uppercase;
+    font-style: italic;
     font-size: 15px;
   }
 }
@@ -289,4 +327,4 @@ footer {
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
 @import "svg-icons";
-@import url(https://fonts.googleapis.com/css?family=Raleway:300);
+@import url(https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy);

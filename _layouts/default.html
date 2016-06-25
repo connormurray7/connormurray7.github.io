@@ -16,35 +16,37 @@
   </head>
 
   <body>
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+    <div class = "outer-wrapper">
+      <div class= "inner-wrapper">
+        <div class="wrapper-sidebar">
+          <header class="masthead clearfix">
+              <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a><br/>
+            <div class="site-info">
+              <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+              <p class="site-description">{{ site.description }}</p>
+            </div>
+            <div>
+              <ul id="nav-side-bar"> 
+                <li><a href="about/">about</a></li>
+                <li><a href="/">projects</a></li>
+                <li><a href="https://github.com/connormurray7">github</a></li>
+              </ul>
+            </div>
+          </header>
+        </div> <!-- wrapper-sidebar -->
+        <div id="main" role="main" class="container" style="margin-left: 270px;">
+          {{ content }}
+        </div>
+      </div> <!-- inner-wrapper -->
+    </div> <!--  outer-wrapper  -->
 
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
-
-          <!--<nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
-          </nav>-->
-        </header>
-      </div>
-    </div>
-
-    <div id="main" role="main" class="container">
-      {{ content }}
-    </div>
-
-    <div class="wrapper-footer">
+    <!--<div class="wrapper-footer">
       <div class="container">
         <footer class="footer">
           {% include svg-icons.html %}
         </footer>
       </div>
-    </div>
+    </div> -->
 
   </body>
 </html>

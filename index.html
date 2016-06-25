@@ -3,16 +3,22 @@ layout: default
 ---
 
 <div class="posts">
+<h1 style="font-size: 1.75em;"> Welcome! </h1>
+<p> This site is in "blog" format, but it really isn't a blog, just a place to talk a little more in depth about the projects or code that is on my <a href="https://github.com/connormurray7">github</a>. The projects on here are going to mostly consist of C++, Python, Swift, and linux/shell.
+<br/>
+
+  <h2>Projects</h2><br/>
   {% for post in site.posts %}
     <article class="post">
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
+      <!--<h2 style="color: #000">-->
+      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      <hr/>
       <div class="entry">
         {{ post.excerpt }}
       </div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">continue</a>
     </article>
   {% endfor %}
 </div>
