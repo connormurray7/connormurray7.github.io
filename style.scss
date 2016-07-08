@@ -18,9 +18,10 @@ html {
 }
 
 body {
+  padding-bottom : 100px;
   background: $white;
-  //font: 18px/1.4 $helvetica;
-  font-family: 'Sorts Mill Goudy', serif;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  //font-family: 'Sorts Mill Goudy', serif;
   color: $darkGray;
 }
 
@@ -39,6 +40,7 @@ body {
     width: 100%;
     float: left;
     display: block;
+    padding-bottom : 60px;
 }
 
 .container {
@@ -53,8 +55,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  //font-family: $helveticaNeue;
-  font-family: 'Sorts Mill Goudy', serif;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  //font-family: 'Sorts Mill Goudy', serif;
   color: $darkerGray;
   font-weight: 100;
 
