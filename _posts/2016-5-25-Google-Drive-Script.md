@@ -44,7 +44,7 @@ Here notice that I placed by `g_drive.sh` in `/Users/<user_name>/g_drive.sh`. Al
 Which just opens Google Drive, waits 3 minutes, and closes it. Plenty of time for it to sync. To use another service just change it to whatever app you wish.
 
 ###_Installation_
-Just move the .plist file into `/Library/LaunchDaemons`, which is the folder for global daemons. And then run the command
+Change the `user_name` field in the .plist to your username. Move the .plist file into `/Library/LaunchDaemons`, which is the folder for global daemons. Put the `g_drive.sh` in your home folder.  And then run the command
 
 	launchctl load /Library/LaunchDaemons/com.connormurray7.google_drive_script.plist
 

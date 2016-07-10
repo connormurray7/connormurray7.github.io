@@ -32,7 +32,8 @@ All of the important information for the Messages application are stored in `~/L
 
 `chat.db` is where all of the important information that is stored. The table schemas are as follows
 
-	CREATE TABLE _SqliteDatabaseProperties (key TEXT, value TEXT, UNIQUE(key));
+	CREATE TABLE _SqliteDatabaseProperties 
+		(key TEXT, value TEXT, UNIQUE(key));
 	
 	CREATE TABLE chat (
 	ROWID INTEGER PRIMARY KEY AUTOINCREMENT, 
