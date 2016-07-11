@@ -4,6 +4,7 @@ title: Messages Attachment Manager
 ---
 The [Messages Attachment Manager](https://github.com/connormurray7/message-attachment-manager) is a Mac application that allows you to select and delete the attachments that you have sent and received from people in the Messages application. This is only for people that use Messages (iMessage) on their Mac, if you haven't linked Messages up to your iCloud account then you won't have all of the files on your computer.
 
+![alt text](/images/Message-Attachment-Manager.png "Title")
 
 ### _Credits_
 
