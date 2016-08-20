@@ -39,7 +39,7 @@ Here notice that I placed by `g_drive.sh` in `/Users/<user_name>/g_drive.sh`. Al
 	#!/bin/sh
 	open /Applications/Google\ Drive.app
 	sleep 180 
-	kill `pgrep Google\ Drive`
+	kill pgrep Google\ Drive
 	
 Which just opens Google Drive, waits 3 minutes, and closes it. Plenty of time for it to sync. To use another service just change it to whatever app you wish.
 
