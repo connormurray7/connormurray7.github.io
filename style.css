@@ -25,6 +25,12 @@ time, mark, audio, video {
 .small {
   font-size: 75%;
 }
+.date {
+  padding-top: 30px;
+}
+li {
+    padding: 0.2em;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {

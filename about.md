@@ -8,8 +8,8 @@ I am a software engineer living in Chicago and an avid runner. Besides running, 
 
 
 * Graduated the University of Michigan in 2016 with a B.S in Computer Science.
-* Raced a Solar car in the Word Solar Challenge in 2013 ([more info](http://www.solarcar.engin.umich.edu/2013/))
-* Coordinated an [event](http://mrun.clubrunning.org/ram/) for the Special Olympics that raised almost $20,000
+* Coordinated an [event](http://mrun.clubrunning.org/ram/) for the Special Olympics that raised nearly $20,000
+* Raced a solar car across the Outback in the Word Solar Challenge in 2013 ([more info](http://www.solarcar.engin.umich.edu/2013/))
 
 ### Contact me
 
