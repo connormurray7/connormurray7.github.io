@@ -10,21 +10,21 @@ layout: default
   <h2>Posts</h2><br/>
   {% for post in site.tags.post %}
     <article class="post">
-      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      <span class="small" style="width: 120px; display: inline-block">{{ post.date | date: '%B %d, %Y'}}</span><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
     </article>
   {% endfor %}
 
   <h2>Weekly Updates</h2><br/>
   {% for post in site.tags.update %}
     <article class="post">
-      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      <span class="small" style="width: 120px; display: inline-block">{{ post.date | date: '%B %d, %Y'}}</span><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
     </article>
   {% endfor %}
 
   <h2>Project Posts</h2><br/>
   {% for post in site.tags.project %}
     <article class="post">
-      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+        <span class="small" style="width: 120px; display: inline-block">{{ post.date | date: '%B %d, %Y'}}</span><a href="{{ site.baseurl }}{{ post.url }}">  {{ post.title }}</a>
     </article>
   {% endfor %}
 </div>

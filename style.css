@@ -22,6 +22,9 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline;
 }
+.small {
+  font-size: 75%;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -69,7 +72,7 @@ html {
 body {
   background: #fff;
   //font-family: 'Sorts Mill Goudy', serif;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   color: #333;
 }
 
@@ -106,9 +109,9 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   //font-family: 'Sorts Mill Goudy', serif;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
    font-weight: 300;
-  font-family: HelveticaN 
+  font-family: HelveticaN
   color: #222;
   //font-weight: 100;
   line-height: 1.7;
