@@ -1,11 +1,12 @@
 ---
 layout: post
-title: Google Drive Script 
+tags: project
+title: Google Drive Script
 ---
 
 [This script](https://github.com/connormurray7/google-drive-script) implements a launchd task on macOS (similar to cron) that opens Google Drive (or Dropbox, Box, etc) in a defined interval for some amount of time. The purpose of the application is to sync your data without having the syncing service always on and hurting your battery.
 
-For example, this script opens up Google Drive every hour for three minutes (plenty of time to sync for what I work on). And then closes Google Drive. 
+For example, this script opens up Google Drive every hour for three minutes (plenty of time to sync for what I work on). And then closes Google Drive.
 
 ### _Why I made this_
 
@@ -20,7 +21,7 @@ The launchd daemon manager is an open-soure project that Apple uses in OS X (now
 	<dict>
     	<key>Label</key>
     	<string>com.connormurray7.google_drive_script</string>
-    
+
     	<key>ProgramArguments</key>
     	<array>
         	<string>/Users/<user_name>/g_drive.sh</string>
@@ -38,9 +39,9 @@ Here notice that I placed by `g_drive.sh` in `/Users/<user_name>/g_drive.sh`. Al
 
 	#!/bin/sh
 	open /Applications/Google\ Drive.app
-	sleep 180 
+	sleep 180
 	kill pgrep Google\ Drive
-	
+
 Which just opens Google Drive, waits 3 minutes, and closes it. Plenty of time for it to sync. To use another service just change it to whatever app you wish.
 
 ###_Installation_
@@ -49,5 +50,3 @@ Change the `user_name` field in the .plist to your username. Move the .plist fil
 	launchctl load /Library/LaunchDaemons/com.connormurray7.google_drive_script.plist
 
 That's it!
-
-
