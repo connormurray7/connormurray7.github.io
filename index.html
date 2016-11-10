@@ -7,21 +7,21 @@ layout: default
 <p> I'm a Software Engineer living in Chicago and a recent grad from the University of Michigan. Take a look at my  <a href="https://github.com/connormurray7">github here</a>. You can find out more about me on the about page, and can always contact me at <a href="mailto:connormurray7@gmail.com">connormurray7@gmail.com</a>
 <br/>
 
-  <h2>Posts</h2><br/>
+  <h2>Posts</h2>
   {% for post in site.tags.post %}
     <article class="post">
       <span class="small" style="width: 120px; display: inline-block">{{ post.date | date: '%B %d, %Y'}}</span><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
     </article>
   {% endfor %}
 
-  <h2>Weekly Updates</h2><br/>
+  <h2>Weekly Updates</h2>
   {% for post in site.tags.update %}
     <article class="post">
       <span class="small" style="width: 120px; display: inline-block">{{ post.date | date: '%B %d, %Y'}}</span><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
     </article>
   {% endfor %}
 
-  <h2>Project Posts</h2><br/>
+  <h2>Project Posts</h2>
   {% for post in site.tags.project %}
     <article class="post">
         <span class="small" style="width: 120px; display: inline-block">{{ post.date | date: '%B %d, %Y'}}</span><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
