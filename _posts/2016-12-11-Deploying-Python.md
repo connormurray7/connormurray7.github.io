@@ -13,8 +13,29 @@ This part is probably the easiest step in the process, there are many vendors yo
 #### Getting a VM
 The next step is to choose a place to host your application, there are many options: AWS, Google, DigitalOcean, Linode, etc. There are different benefits to each, so I would do a little research before choosing. Ultimately all of these companies are going to provide a similar service, so don't sweat it unless you have specific needs.
 
+#### Nameservers and DNS
+This step is really important, and kind of difficult to understand if you haven't done it before. When you type an address in your browser, it will go to the nameserver that it originated from (Google, Namecheap, GoDaddy, etc.). And you need to have that nameserver point to the right place so your application can serve the site. This process is different for every name registrar, so you might need to do a little Googling. As an example, using Namecheap to get a domain and Linode a VM. You would have to select `Custom DNS` and then have 5 entries
+
+```
+ns1.linode.com
+ns2.linode.com
+ns3.linode.com
+ns4.linode.com
+ns5.linode.com
+```
+This tells Namecheap that you want that domain to be registered with these boxes. Then on Linode's Manager you would have a "domain zone" (your domain) that points to your VM's IP address (usually this is all setup for you, you might just have to select a few things from a dropdown).
+
 #### Securing your server
-I would highly recommend securing your server because you never know what could happen, especially when you start publishing your website. I recommend one of [Linode's articles](https://www.linode.com/docs/security/securing-your-server). It is a beginner friendly guide that has explanations for a variety of operating systems.
+As a first step when you log onto your VM, I would highly recommend securing your server because you never know what could happen, especially when you start publishing your website. I recommend one of [Linode's articles](https://www.linode.com/docs/security/securing-your-server). It is a beginner friendly guide that has explanations for a variety of operating systems.
+
+#### Serving your domain on your box
+You will need to add an entries to your `/etc/hosts` file so that when a request hits your box looking for your domain, that you can serve it. Typically `localhost` is already filled out for you, but if not go ahead and add it. You can figure out your hostname by typing `hostname` in the terminal.
+
+```
+127.0.0.1       localhost
+<VM-IP-addres>  <domain>        <your-hostname>
+```
+
 
 #### Configuring Nginx
 If you haven't already, install Nginx on the box, if you're using Ubuntu
