@@ -23,7 +23,7 @@ ns3.linode.com
 ns4.linode.com
 ns5.linode.com
 ```
-This tells Namecheap that you want that domain to be registered with these boxes. Then on Linode's Manager you would have a "domain zone" (your domain) that points to your VM's IP address (usually this is all setup for you, you might just have to select a few things from a dropdown).
+This tells Namecheap that you want that domain to be registered with these boxes. Then on Linode's Manager you would have a "domain zone" (your domain) that points to your VM's IP address (usually this is all setup for you, you might just have to select a few things from a dropdown). Every domain provider and hosting company has their own intricacies, so it's probable you will have to read some of their docs to figure out what their process entails for this step.
 
 #### Securing your server
 As a first step when you log onto your VM, I would highly recommend securing your server because you never know what could happen, especially when you start publishing your website. I recommend one of [Linode's articles](https://www.linode.com/docs/security/securing-your-server). It is a beginner friendly guide that has explanations for a variety of operating systems.
@@ -87,4 +87,12 @@ if __name__ == "__main__":
 
 To run,
 
-    gunicorn --bind 0.0.0.0:8000 wsgi
+    gunicorn --bind 0.0.0.0:8000 wsgi &
+
+You should now be able to see your website when you type your domain in your browser (assuming you've given enough time for the DNS registrar to register you). Some other steps you may want to look into are
+
+* Startup scripts for your service when the VM boots
+* More security
+* Scaling across multiple boxes
+
+Hope this helped!
