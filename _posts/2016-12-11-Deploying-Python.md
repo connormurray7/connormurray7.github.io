@@ -46,6 +46,18 @@ And finally
 
 #### Starting up your application
 
-Assuming you have a Flask application that runs (if you don't look at [this quickstart guide](http://flask.pocoo.org/docs/0.11/quickstart/)) then 
+Assuming you have a Flask application that runs (if you don't look at [this quickstart guide](http://flask.pocoo.org/docs/0.11/quickstart/)) then all we need to do is setup the WSGI. If you don't know what a WSGI is, read [about it here](https://www.fullstackpython.com/wsgi-servers.html). We'll use Gunicorn, for Ubuntu you can install with
 
-gunicorn --bind 0.0.0.0:8000 wsgi
+    sudo apt-get install gunicorn
+
+Then create a file `wsgi.py`. If your application has a `main.py` with a Flask application called `application`, then `wsgi.py` would contain
+```
+from main import app
+
+if __name__ == "__main__":
+    app.run()  
+```
+
+To run,
+
+    gunicorn --bind 0.0.0.0:8000 wsgi
