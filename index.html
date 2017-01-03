@@ -17,17 +17,17 @@ layout: default
     </article>
   {% endfor %}
 
-  <h2>Updates</h2>
-  {% for post in site.tags.update %}
-    <article class="post">
-      <span class="small" style="width: 120px; display: inline-block">{{ post.date | date: '%B %d, %Y'}}</span><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-    </article>
-  {% endfor %}
-
   <h2>Projects</h2>
   {% for post in site.tags.project %}
     <article class="post">
         <span class="small" style="width: 120px; display: inline-block">{{ post.date | date: '%B %d, %Y'}}</span><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+    </article>
+  {% endfor %}
+  
+  <h2>Updates</h2>
+  {% for post in site.tags.update %}
+    <article class="post">
+      <span class="small" style="width: 120px; display: inline-block">{{ post.date | date: '%B %d, %Y'}}</span><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
     </article>
   {% endfor %}
 </div>

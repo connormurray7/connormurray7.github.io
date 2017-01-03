@@ -76,9 +76,9 @@ Assuming you have a Flask application that runs (if you don't look at [this quic
 
     sudo apt-get install gunicorn
 
-Then create a file `wsgi.py`. If your application has a `main.py` with a Flask application called `application`, then `wsgi.py` would contain
+Then create a file `wsgi.py`. If your application has a `main.py` with a Flask application called `app`, then `wsgi.py` would contain
 
-```
+```python
 from main import app
 
 if __name__ == "__main__":
