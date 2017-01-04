@@ -15,7 +15,30 @@ Logging is a first class citizen in Link Aggregator. The more you know about the
 ### _Caching_
 Link Aggregator uses a simple LRU cache to store the most recent searched items. It holds the responses in memory because it doesn't need to write anything to a database, the application can always make another API request if it goes down and then has to start back up.
 
-The cache data structure inherits from  `collections.OrderedDict`  in the Python Standard Library. This allows for efficient eviction without needed to loop through every item in the cache.
+The [cache data structure](https://github.com/connormurray7/link-aggregator/blob/master/linkagg/cache.py) wraps around the LRU cache that inherits from  `OrderedDict` in the Python Standard Library. This allows for efficient eviction without needed to loop through every item in the cache.
+
+```python
+class LRUCache(OrderedDict):
+    """Stores a JSON string of a request.
+    Inherits from OrderedDict so the least recently used item
+    can be evacuated efficiently.
+    Attributes:
+        capacity: the maximum size of the cache.
+        __setitem__: overrides the OrderedDict __setitem__
+    """
+
+    def __init__(self, capacity):
+        self.capacity = capacity
+        self.logger = logging.getLogger(__name__)
+        super().__init__()
+
+    def __setitem__(self, key, value):
+        """Will evacuate the LRU item if cache is full."""
+        if len(self) == self.capacity:
+            self.logger.info("Cache reached capacity " + self.capacity + " evacuating item")
+            self.popitem(False)
+        OrderedDict.__setitem__(self, key, value)
+```
 
 ### _Rate Limiting_
 Sometimes caching is not enough, Link Aggregator also limits the amount of requests it makes to the API's it calls. If there are more than x/sec (20 as a default based on the API with the least allowed/sec) then it will not execute the request.
@@ -23,3 +46,4 @@ Sometimes caching is not enough, Link Aggregator also limits the amount of reque
 This does not apply to items that are already in the cache (100 requests for "eventual consistency" per second will not be limited because the cache can serve those requests without API calls).
 
 ### _Configuration_
+Link Aggregator uses `ConfigParser` from the Python Standard Library to read in parameters from a config file. This permits less hardcoding of values. The urls for each of the end points, the rate limiting parameters, and the cache size are all configurable parameters.
