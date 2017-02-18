@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: post
+tags: 
 title: Writing Code Everyday
 ---
 I wrote in my first [update](http://connormurray.me/Update1/), that the Software Engineering career is one of continuous learning, and much of that will be brushing up after work. I’m early in my career so I try to dedicate a lot of time to it after work (it’s not hard if you love it!). But I have found that just reading about new technologies is _not nearly good enough_. 
